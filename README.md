@@ -9,11 +9,7 @@ This software is in alpha and meant as a proof of concept. For a more mature imp
 - `bin/www` `var port = normalizePort(process.env.PORT || '3000');`
 
 # Technology
-Node.js/Express on the backend, EJS template engine, plain JS frontend.
-
-# Documentation links
-- https://github.com/WiseLibs/better-sqlite3/blob/HEAD/docs/api.md
-- https://www.npmjs.com/package/better-sqlite3#user-content-documentation
+Node.js/Express on the backend. EJS template engine, plain JS frontend. SQLite database using better-sqlite3.
 
 # To Do
 - icons exactly as linktree
