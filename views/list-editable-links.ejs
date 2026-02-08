@@ -1,0 +1,12 @@
+<ul>
+  <div class="flex-vertical">
+<%
+  for (const i in links) {
+    const { title: _title, url, user_id, id: _current_link } = links[i];
+    const linktitle = _title ? _title : url;
+%>
+    <%- include('edit-link-form', {_current_link, _title: linktitle, url}); -%>
+<% } %>
+
+  </div>
+</ul>

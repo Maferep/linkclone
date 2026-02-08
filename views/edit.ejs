@@ -1,0 +1,17 @@
+<%- include('header'); -%>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <%= links.map(linkinfo =>
+`<li>${linkinfo.sitename}: ${linkinfo.url}
+</li>`
+).join("") %>
+    <form method="POST" action="ceets?edit=link-create">
+    <label for="linkdesc"> Link description:
+        <input type="text" name="linkdesc" />
+    </label>
+    <label for="link"> Link:
+        <input type="url" name="link" />
+    </label>
+    <input type="submit" value="Send <3" />
+    </form>
+<%- include('footer'); -%>

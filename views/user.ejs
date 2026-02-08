@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+<!-- linear gradient fixed to background hack
+  https://css-tricks.com/the-fixed-background-attachment-hack/ -->
+<div class="user-card__backdrop"></div>
+<div id="contrast-screen"></div>
+<div class="general-container user-card <%= preset ? 'user-card--' + preset : ''%>">
+  <div class="round-cropper">
+    <img src="/media/<%= username %>/pfp"/>
+  </div>
+  <h2><%= title ? title : username %></h2>
+  <div class="bio" style="white-space: pre-line"><%=bio%></div>
+  <%- include('list-links'); -%>
+  <% if (links.length <= 0) { %>
+    <p>No links found</p>
+  <% } %>
+  <% if (login && login.username == username) { %>
+    <a class="edit-links-button" href="/edit/u/<%= username %>">✏️ Edit links</a>
+  <% } %>
+</div>
+<%- include('footer'); -%>

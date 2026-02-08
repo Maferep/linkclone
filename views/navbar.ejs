@@ -1,0 +1,17 @@
+<div id="navbar">
+    <% if (typeof login !== 'undefined') { %>
+    <div><a href="/"><%= login.username %></a></div>
+    <% } %>
+    <div><a href="/">Home</a></div>
+    <% if (typeof login == 'undefined') { %>
+      <div><a href="/login">Login</a></div>
+    <% } else {
+        console.log(login) %>
+        <div>
+            <form action="/logout" method="post">
+                <input type="submit" value="Logout" id="navbutton">
+            </form>
+        </div>
+    <%} %>
+
+</div>

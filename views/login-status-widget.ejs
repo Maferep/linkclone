@@ -1,0 +1,5 @@
+<% if (!username) { %>
+    <div><a href="/login">Login</a></div>
+<% } else { %>
+    <div><a href="/login">Logout <%- username %></a></div>
+<% }%>

@@ -1,0 +1,15 @@
+<form class="add-link-form" method="POST" action="/u/<%= username %>/links/<%= _current_link %>" enctype="multipart/form-data">
+    <label for="siteicon">
+        <%- include('linkicon-form'); -%>
+    </label>
+    <div class="link-form-text">
+        <label for="linkdesc"><b>Title</b>
+            <input type="text" name="linkdesc" value="<%= _title %>" required />
+        </label>
+        <label for="link"> <b>URL</b>
+            <input type="url" name="link" value="<%= url %>" required />
+        </label>
+        <input type="submit" value="Edit link" />
+        <input formaction="/u/<%= username %>/links/<%= _current_link %>/delete" type="submit" value="Delete link" />
+    </div>
+</form>

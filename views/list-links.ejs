@@ -1,0 +1,16 @@
+<ul class="linklist">
+<%
+  for (const i in links) {
+    const { title, url, user_id, id } = links[i];
+%>
+  <div class="userlink">
+    <a class="userlink-clickable" href="<%= url %>">
+      <img class="siteicon" src="/u/<%= username %>/<%= id %>/pfp"/>
+      <span><%= title %></span>
+    </a>
+    <a class="copyicon" href="javascript:linktoclipboard(this, '<%= url %>')">
+      <img src="/icons/clipboard.svg"/>
+    </a>
+  </div>
+<% } %>
+</ul>

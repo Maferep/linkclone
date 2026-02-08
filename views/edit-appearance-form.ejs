@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+<div class="general-container edit-appearance">
+  <div>
+    <iframe src="/u/<%- user.username %>/" class="edit-appearance__preview"></iframe>
+  </div>
+  <form method="POST" action="/u/<%= user.username %>/appearance" >
+    <fieldset class="edit-appearance__presets">
+      <!-- TODO: connect presets to user-appearance form -->
+      <!-- this updates the preview indirectly, through the main form -->
+      <!-- XXX: real preview thumbnail -->
+      <% for (const preset of presets) { %>
+        <label class="card">
+          <h3 class="card__title"><%= preset %></h3>
+          <img class="card__visual" src="/icons/pythonicon.svg">
+          <input
+            class="card__legend radio"
+            type="radio"
+            required
+            name="preset"
+            value="<%= preset %>"
+          >
+        </label>
+      <% } %>
+    </fieldset>
+    <div>
+      <!-- user preview -->
+      <button type="submit">Save</button>
+    </div>
+  <!-- TODO: unset presets if any element is triggered -->
+  <!-- TODO: update preview on input -->
+  </form>
+</div>
+<%- include('footer'); -%>

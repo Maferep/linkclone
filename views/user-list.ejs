@@ -1,0 +1,11 @@
+<%- include('header'); -%>
+<div class="general-container">
+  <h1>Users</h1>
+  <ul>
+    <% for (const username of usernames) { %>
+      <li><a href="/u/<%= username %>"><%= username %></a></li>
+    <% } %>
+    <%= usernames.length ? "" : "No usernames found" %>
+  </ul>
+  </div>
+<%- include('footer'); -%>

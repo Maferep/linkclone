@@ -1,0 +1,13 @@
+<div class="pfp-form">
+    <img class="reference-img-invisible" src="/media/<%= username %>/pfp"/>
+    <div class="upload-round-cropper">
+        <canvas id="canvas" class="canvas"></canvas>
+    </div>
+    
+    <label class="change-pfp-label">
+        <input type="file" id="fileInput" name="pfp" accept="image/*" hidden />
+        <a class="button">Change pfp</a>
+    </label>
+</div>
+<script src="/cropper.js"></script>
+<script src="/pfp-cropper.js"></script>

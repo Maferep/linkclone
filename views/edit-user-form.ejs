@@ -1,0 +1,37 @@
+<%- include('header'); -%>
+<script src="/someJavascript.js"></script>
+<div class="general-container">
+  <!-- XXX: duplicated id -->
+  <!-- XXX: #edit-appearance applied to something other than edit appearance form -->
+  <div class="upper-button">
+    <a href="/edit/u/<%= username %>/appearance">🎨 Edit theme</a>
+  </div>
+  <div class="upper-button">
+    <a href="/u/<%= username %>">👁️ View page</a>
+  </div>
+
+  <div class="add-link">
+    <form method="POST" action="/u/<%= username %>/profile" enctype="multipart/form-data">
+      <%- include('pfp-form'); -%>
+      <label for="title">Title
+        <input id="title" type="text" name="title" value="<%= title %>" />
+      </label>
+      <label for="bio">Bio
+      </label>
+      <textarea id="bio" name="bio" rows="3"><%= bio %></textarea>
+      <input type="submit" value="Upload profile" />
+    </form>
+  </div>
+
+
+  <div class="add-link">
+    <%- include('add-link-form'); -%>
+  </div>
+
+  <%- include('list-editable-links'); -%>
+  <% if (links.length <=0) { %>
+    <p>No links found</p>
+  <% } %>
+
+</div>
+<%- include('footer'); -%>
