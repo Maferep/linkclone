@@ -16,21 +16,16 @@ Node.js/Express on the backend, EJS template engine, plain JS frontend.
 - https://www.npmjs.com/package/better-sqlite3#user-content-documentation
 
 # To Do
-
-- user page
-    - icons exactly as linktree
-    - jpeg **XL**
-    - crop pfp
-    - some way to change link order
-    - compress images in frontend
-    - delete links
-- persistent sqlite store (other than sessions)
-    - clean up redundant tables
-    - add jsdocs/intellisense to store interface (better-sqlite3 plugin?)
+- icons exactly as linktree
+- jpeg **XL**
+- crop pfp
+- some way to change link order
+- compress images in frontend
+- delete links
+- clean up redundant tables
+- add jsdocs/intellisense to store interface (better-sqlite3 plugin?)
 - invite code
 - report button
-- change background
-- change color scheme (background, container, buttons)
 - change text size
 
 ## UI / UX
